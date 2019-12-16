@@ -18,9 +18,9 @@ let fruit = [
 ]
 
 let knop = document.getElementById('knop');
-let fruit1 = document.getElementById('0');
-let fruit2 = document.getElementById('1');
-let fruit3 = document.getElementById('2');
+let fruit1 = document.getElementById('kolom1');
+let fruit2 = document.getElementById('kolom2');
+let fruit3 = document.getElementById('kolom3');
 
 knop.addEventListener('click', () => {
     let fruit1nummer = Math.floor(Math.random() * 16);
@@ -30,3 +30,10 @@ knop.addEventListener('click', () => {
     fruit2.innerHTML = fruit[fruit2nummer];
     fruit3.innerHTML = fruit[fruit3nummer];
 });
+
+var button = document.getElementById("knop"),
+count = 0;
+button.onclick = function() {
+    count += 1;
+    button.innerHTML = "KLIK HIER: " +count;
+};
